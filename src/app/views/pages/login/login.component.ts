@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   password:any;
   rememberMe:any;
   constructor(
-    private firestore:Firestore, private router: Router,
+    private firestore:Firestore, private route: Router,
 
     
     
@@ -42,12 +42,13 @@ export class LoginComponent implements OnInit {
               // You can use Angular's Router to navigate
               sessionStorage.setItem('user',user['email_id']);
               console.log('Login successful');
+              this.route.navigate(['/dashboard']);
               // this.router.navigate(['/dashboard']); // Replace with your route
             } else {
               console.log('Incorrect password');
             }
           } else {
-            console.log('Email not found');
+            console.log('Email not found'); 
           }
           
         });

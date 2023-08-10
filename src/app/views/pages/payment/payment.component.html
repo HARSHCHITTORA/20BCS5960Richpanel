@@ -1,0 +1,54 @@
+<div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="formContainer">
+      <div class="left">
+        <h3>Complete Payment</h3>
+        <p>Enter your credit card details below</p>
+        <div class="input-container">
+            <div class="card-icon">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <input type="text" class="card-input" placeholder="Card Number">
+            <div class="date-input">
+              <input type="text" placeholder="DD" class="date-dd">
+              <span>/</span>
+              <input type="text" placeholder="MM" class="date-mm">
+              <span>/</span>
+              <input type="text" placeholder="YY" class="date-yy">
+            </div>
+          </div>
+          <button class="payment">Confirm Payment</button>
+      </div>
+      <div class="right">
+        <div class="row">
+            <h4>Order Summary</h4>
+        </div>
+     
+      <div class="row mt-2">
+        <div class="col">
+            <p>Plan Name</p>
+        </div>
+        <div class="col">
+            {{selectedPlanData.plan}}
+            </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col">
+            <p>Billing Cycle</p>
+        </div>
+        <div class="col">
+            {{selectedPlanData.billing}}
+            </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col">
+            <p>Plan Price</p>
+        </div>
+        <div class="col">
+            <p>Rs {{selectedPlanData.price}}</p>
+            </div>
+      </div>
+      </div>
+    </div>
+  </div>

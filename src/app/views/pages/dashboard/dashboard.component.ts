@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   verified: boolean=false;
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -27,9 +28,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  selectplan(option: number) {
-    this.selectedplan = option;
-  }
+  
 
 
   selectCard(cardNumber: number): void {
@@ -40,4 +39,31 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+
+  selectedPlanPrice: string = ''; // Initialize an empty string to store the selected plan's price
+
+  // Update the selectplan method to also set the selectedPlanPrice
+  selectplan(option: number) {
+    this.selectedplan = option;
+
+    if (this.selectedplan === 1) {
+      this.selectedPlanPrice = this.verified ? '1000' : '100';
+    } else if (this.selectedplan === 2) {
+      this.selectedPlanPrice = this.verified ? '2000' : '200';
+    } else if (this.selectedplan === 3) {
+      this.selectedPlanPrice = this.verified ? '5000' : '500';
+    } else if (this.selectedplan === 4) {
+      this.selectedPlanPrice = this.verified ? '7000' : '700';
+    }
+
+    console.log(this.selectedPlanPrice);
+  }
+
+  navigateToOtherPage() {
+    // Assuming you have a route configured for the other page/component
+    this.route.navigate(['/payment'], {
+      queryParams: { price: this.selectedPlanPrice } // Pass the selectedPlanPrice as a query parameter
+    });
+
+  }
 }

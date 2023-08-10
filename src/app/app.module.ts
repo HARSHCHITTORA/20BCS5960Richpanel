@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { DashboardComponent } from './views/pages/dashboard/dashboard.component';
+import { PaymentComponent } from './views/pages/payment/payment.component';
 
 // import { PasswordModule } from 'primeng/password';
 // import { InputTextModule } from 'primeng/inputtext';
@@ -26,6 +27,7 @@ import { DashboardComponent } from './views/pages/dashboard/dashboard.component'
     LoginComponent,
     RegistrationComponent,
     DashboardComponent,
+    PaymentComponent,
   
   ],
   imports: [

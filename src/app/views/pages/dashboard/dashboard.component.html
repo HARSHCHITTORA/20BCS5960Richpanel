@@ -1,1 +1,253 @@
-<p>dashboard works!</p>
+<h3 style="text-align: center;">Choose the right plan for you</h3>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="toggle-button">
+                <button
+                  class="toggle-option"
+                  [class.active]="selectedOption === 0"
+                  (click)="selectOption(0)"
+                >
+                  Monthly
+                </button>
+                <button
+                  class="toggle-option"
+                  [class.active]="selectedOption === 1"
+                  (click)="selectOption(1)"
+                >
+                  Yearly
+                </button>
+              </div>
+
+        </div>
+        
+    
+
+        <div class="col-md-3">
+            <div class="toggle-button1">
+                <button
+                  class="toggle-option1"
+                  [class.active]="selectedplan === 1"
+                  (click)="selectplan(1)"
+                >
+                  Mobile
+                </button>
+                <button
+                  class="toggle-option1"
+                  [class.active]="selectedplan === 2"
+                  (click)="selectplan(2)"
+                >
+                  Basic
+                </button>
+                <button
+                  class="toggle-option1"
+                  [class.active]="selectedplan === 3"
+                  (click)="selectplan(3)"
+                >
+                  Standard
+                </button>
+                <button
+                  class="toggle-option1"
+                  [class.active]="selectedplan === 4"
+                  (click)="selectplan(4)"
+                >
+                  Premium
+                </button>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p>Monthly Price</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate" *ngIf="!verified">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}">Rs 100</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">Rs 200</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">Rs 500</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">Rs 700</p>
+                
+            </div>
+            <div class="Rate" *ngIf="verified">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}">Rs 1000</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">Rs 2000</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">Rs 5000</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">Rs 7000</p>
+                
+            </div>
+            
+          </div>
+          
+       </div>
+    
+      </div>
+    <hr>    
+      <div class="row ">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p>Video quality</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}">Good</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">Good</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">Better</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">Best</p>
+                
+            </div>
+            
+          </div>
+       </div>
+    
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p>Video quality</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}">Good</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">Good</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">Better</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">Best</p>
+                
+            </div>
+            
+          </div>
+       </div>
+    
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p>Resolution</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}">480p</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">480p</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">1080p</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">4K+HDR</p>
+                
+            </div>
+            
+          </div>
+       </div>
+    
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p>Device you can use to watch</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}">phone</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">phone</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">phone</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">phone</p>
+                
+            </div>
+            
+          </div>
+       </div>
+    
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}">tablet</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">tablet</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">tablet</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">tablet</p>
+                
+            </div>
+            
+          </div>
+       </div>
+    
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}"></p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">computer</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">computer</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">computer</p>
+                
+            </div>
+            
+          </div>
+       </div>
+    
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <div class="d-flex flex-column ">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex flex-column">
+            <div class="Rate">
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 1, 'yearly-price': selectedplan !== 1}"></p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 2, 'yearly-price': selectedplan !== 2}">tv</p>
+                <p class="price"[ngClass]="{'monthly-price': selectedplan === 3, 'yearly-price': selectedplan !== 3}">tv</p>
+                <p class="price" [ngClass]="{'monthly-price': selectedplan === 4, 'yearly-price': selectedplan !== 4}">tv</p>
+                
+            </div>
+            
+          </div>
+       </div>
+    
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button
+                class="btn btn-primary next"
+                
+            >
+                Next
+            </button>
+        </div>
+    </div>
+</div>
+
+
+  </div>
+  
+
+
+
+  

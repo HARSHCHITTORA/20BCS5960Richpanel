@@ -1,0 +1,140 @@
+
+
+.toggle-button {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: auto;
+    background-color: rgb(31, 77, 145);
+    border: none;
+    border-radius: 40px; 
+    margin-top: 40px;
+    padding: 10px;
+    
+  }
+
+  .toggle-button1 {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: auto;
+    /* background-color: rgb(31, 77, 145); */
+    border: none;
+    /* border-radius: 40px;  */
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .toggle-option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color:rgb(31, 77, 145);
+    border: none;
+    border-radius: 20px; /* Make the button round */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color:white;
+  }
+
+  .toggle-option1 {
+    flex: 1;
+    text-align: center;
+    /* padding: 10px; */
+    background-color:rgb(89, 133, 199);
+    border: none;
+   
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    color:white;
+    margin-left: 30px;
+    
+  }
+  
+  .toggle-option.active {
+    background-color: white;
+    color: rgb(31, 77, 145);
+  }
+ 
+  .toggle-option1.active {
+    background-color: rgb(31, 77, 145);
+    color:white ;
+  }
+  
+  .toggle-button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .toggle-button1.active {
+    background-color: #6091c7;
+    color: white;
+  }
+  
+  
+  .toggle-button1{
+    height:120px;
+    width:600px;
+    margin-left: 50px;
+  }
+
+  .monthly-price {
+    color: rgb(14, 54, 113);
+    font-weight: 80;
+  }
+  
+  .yearly-price {
+    color: rgb(7, 7, 7);
+  }
+
+  .Rate{
+    display:flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: auto;
+    /* background-color: rgb(31, 77, 145); */
+    border: none;
+    /* border-radius: 40px;  */
+    /* margin-top: 20px; */
+    /* padding: 10px; */
+    margin-left:50px
+  }
+
+.price{
+    
+        flex: 1;
+        text-align: left;
+        /* padding: 10px; */
+        /* background-color:rgb(89, 133, 199); */
+        border: none;
+       
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-left: 80px;
+        /* color:white; */
+        /* margin-left: 30px; */
+        
+      
+}
+
+hr {
+    width: 70%; /* Adjust the width to your desired value */
+    height: 1px; /* Set the height to maintain the horizontal appearance */
+    background-color: rgb(22, 21, 21); /* Optional: Change the color of the line */
+    border: none; /* Remove the default border */
+    margin-left: 8%;
+    margin-top: 15px; margin-bottom: 3px;
+  }
+  .next{
+    text-align: center;
+    align-items: center;
+    width:400px;
+    background-color: rgb(31, 77, 145);
+  }
+
+  
+  p{
+    text-align: left;
+    margin-left: 100px;
+  }

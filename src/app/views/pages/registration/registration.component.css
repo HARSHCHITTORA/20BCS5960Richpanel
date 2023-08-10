@@ -1,0 +1,28 @@
+
+
+  .container-fluid{
+    min-height: 100vh;
+    background-color: rgb(31, 77, 145);
+  }
+  .formContainer{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  }
+  .headingText{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+  }
+
+  a{
+    cursor: pointer;
+  }
+
+  input{
+    border-radius: 5px;
+  }
+  
+
+   

@@ -1,0 +1,56 @@
+<div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="formContainer">
+      <div class="headingText d-flex justify-content-center">Create Account</div>
+      <form #f="ngForm" (ngSubmit)="register()">
+        <div class="form-row">
+          <label class="form-label" for="name">Name</label>
+          <input
+            id="name"
+            type="name"
+            class="pinputText col-12"
+            pInputText
+            [(ngModel)]="name"
+            name="name"
+          />
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            class="pinputText col-12"
+            pInputText
+            [(ngModel)]="email"
+            name="email"
+          />
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            class="pinputText col-12"
+            pInputText
+            [(ngModel)]="password"
+            name="password"
+          />
+        </div>
+        <div class="form-row my-2">
+          <label class="form-check-label">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              [(ngModel)]="rememberMe"
+              name="rememberMe"
+            />
+            Remember Me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary col-12 my-2">Register</button>
+      </form>
+      <div class="notRegistered">
+        Don't have an account? <a routerLink="/login" routerLinkActive="active">Login</a>
+      </div>
+    </div>
+  </div>
+  

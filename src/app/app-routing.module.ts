@@ -4,9 +4,14 @@ import { LoginComponent } from './views/pages/login/login.component';
 import { RegistrationComponent } from './views/pages/registration/registration.component';
 import { DashboardComponent } from './views/pages/dashboard/dashboard.component';
 import { PaymentComponent } from './views/pages/payment/payment.component';
+import { ActivePlanComponent } from './views/pages/active-plan/active-plan.component';
 
 const routes: Routes = [
- 
+  {
+    path:'',
+    redirectTo:'login',
+    pathMatch:'full'
+  },
   {
     path: 'login',
     component: LoginComponent,
@@ -23,6 +28,11 @@ const routes: Routes = [
   {
     path:'payment',
     component: PaymentComponent,
+
+  },
+  {
+    path:'activeplan',
+    component: ActivePlanComponent,
 
   }
 ];

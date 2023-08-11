@@ -16,6 +16,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { DashboardComponent } from './views/pages/dashboard/dashboard.component';
 import { PaymentComponent } from './views/pages/payment/payment.component';
+import { ActivePlanComponent } from './views/pages/active-plan/active-plan.component';
+import { DatePipe } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // import { PasswordModule } from 'primeng/password';
 // import { InputTextModule } from 'primeng/inputtext';
@@ -28,6 +31,7 @@ import { PaymentComponent } from './views/pages/payment/payment.component';
     RegistrationComponent,
     DashboardComponent,
     PaymentComponent,
+    ActivePlanComponent,
   
   ],
   imports: [
@@ -41,10 +45,10 @@ import { PaymentComponent } from './views/pages/payment/payment.component';
     provideFirestore(() => getFirestore()),
     // InputTextModule,
     // PasswordModule
-
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

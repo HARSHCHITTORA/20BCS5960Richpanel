@@ -1,0 +1,44 @@
+<div class="container-fluid d-flex justify-content-center align-items-center">
+  <div class="formContainer">
+    <div class="row">
+      <div class="col">
+        <h5 class="headingText">Current Plan Details</h5>
+      </div>
+      <div class="col d-flex align-items-center">
+        <div class="activePlan active" *ngIf="activePlanData.ActiveStatus==='active'">
+          Active
+        </div>
+        <div class="activePlan canceled" *ngIf="activePlanData.ActiveStatus==='cancel'">
+          Canceled
+        </div>
+        <button class="cancelButton ml-2" (click)="
+        onCancelClick()">Cancel</button>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col">
+        <p class="headingText">{{selectedPlanData.plan}}</p>
+      </div>
+    </div>
+    <div class="row devices">
+      <div class="col">
+        <p>{{ selectedPlanData.devices.join(' + ') }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h4>Rs {{selectedPlanData.price}}/{{selectedPlanData.billing}}</h4>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+        <a class="btn btn-primary plan" href="/dashboard">Change Plan</a>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+        <p> Your subsription has started on {{ formattedCurrentDate }} and will auto renew on {{formattedOneYearLater}}</p>
+      </div>
+    </div>
+  </div>
+</div>

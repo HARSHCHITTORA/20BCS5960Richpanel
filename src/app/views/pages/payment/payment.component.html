@@ -7,16 +7,16 @@
             <div class="card-icon">
               <i class="fas fa-credit-card"></i>
             </div>
-            <input type="text" class="card-input" placeholder="Card Number">
+            <input type="text" class="card-input" placeholder="Card Number" [(ngModel)]="cardDetails">
             <div class="date-input">
-              <input type="text" placeholder="DD" class="date-dd">
+              <input type="text" placeholder="DD" class="date-dd" [(ngModel)]="date">
               <span>/</span>
-              <input type="text" placeholder="MM" class="date-mm">
+              <input type="text" placeholder="MM" class="date-mm" [(ngModel)]="month">
               <span>/</span>
-              <input type="text" placeholder="YY" class="date-yy">
+              <input type="text" placeholder="YY" class="date-yy" [(ngModel)]="year">
             </div>
           </div>
-          <button class="payment">Confirm Payment</button>
+          <button class="payment" (click)="navigateToOtherPage()">Confirm Payment</button>
       </div>
       <div class="right">
         <div class="row">
